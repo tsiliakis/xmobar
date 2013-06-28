@@ -1,0 +1,4 @@
+xmobar
+======
+
+Adding some plugins
