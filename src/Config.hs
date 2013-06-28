@@ -143,7 +143,8 @@ infixr :*:
 -- the 'Runnable.Runnable' Read instance. To install a plugin just add
 -- the plugin's type to the list of types (separated by ':*:') appearing in
 -- this function's type signature.
-runnableTypes :: Command :*: Monitors :*: Date :*: PipeReader :*: BufferedPipeReader :*: CommandReader :*: StdinReader :*: XMonadLog :*: EWMH :*: Kbd :*: Locks :*:
+runnableTypes :: Command :*: Monitors :*: Date :*: PipeReader :*: BufferedPipeReader :*: CommandReader :*: StdinReader :*: XMonadLog :*: EWMH :*: Kbd :*: Locks :*: ShowIP :*: Countdown :*: AptUpdates :*: LoadAverage :*:
+
 #ifdef INOTIFY
                  Mail :*: MBox :*:
 #endif
