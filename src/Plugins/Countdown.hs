@@ -9,6 +9,8 @@
 -- Portability :  untested
 --
 -- A simple plugin to display the remaining days till a specific date.
+-- It can be used as a countdown till e.g. New Years or vacations. If
+-- you set New Years you automatically get also the day of the year.
 --
 -----------------------------------------------------------------------------
 
@@ -24,19 +26,20 @@ type Cmonth = Int
 -- | The day of the date
 type Cday = Int
 
-data Countdown = Countdown Cyear Cmonth Cday Int deriving (Read, Show)
+data Countdown = Countdown Cyear Cmonth Cday String Int deriving (Read, Show)
    
 
--- | Counts the days to a specific daye from today                                                             
-cdw :: Cyear -> Cmonth -> Cday -> IO String
-cdw y m d = do  currentTime <- getCurrentTime
-                let currentDay = utctDay currentTime
-                let countdownDay = fromGregorian y m d
-                return $ show (diffDays countdownDay currentDay) ++ " Days"
+-- | Counts the days to a specific date from today. This function returns the number 
+-- of days followed by a String
+cdw :: Cyear -> Cmonth -> Cday -> String -> IO String
+cdw y m d s = do  currentTime <- getCurrentTime
+                  let currentDay = utctDay currentTime
+                  let countdownDay = fromGregorian y m d
+                  return $ show (diffDays countdownDay currentDay) ++ s
 
 
 
 instance Exec Countdown where
-    alias ( Countdown _ _ _ _ ) = "Countdown"
-    run   ( Countdown y m d _ ) = cdw y m d
-    rate  ( Countdown _ _ _ r ) = r
+    alias ( Countdown _ _ _ _ _ ) = "Countdown"
+    run   ( Countdown y m d s _ ) = cdw y m d s
+    rate  ( Countdown _ _ _ _ r ) = r
