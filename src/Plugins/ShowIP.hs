@@ -11,7 +11,7 @@
 -- A simple plugin to display the external IP or any other String from a webserver.
 -- As a simple server that returns a IP, feel free to use my server at 
 -- http://srv.u0.org/ip.php , but I can't guarantee that it will be up forever.
--- Other choices are http://wtfismyip.com/text or just google ;) 
+-- An alternative is http://wtfismyip.com/text.
 --
 -----------------------------------------------------------------------------
 
