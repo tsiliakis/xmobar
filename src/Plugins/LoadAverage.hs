@@ -8,9 +8,13 @@
 -- Stability   :  unstable
 -- Portability :  untested
 --
--- A simple plugin to display the load average of the system. This plugin
--- is using uptime to retrieve the load average and then parses the result
--- to a definable form.
+-- A simple plugin to display the load average of the system. 
+--
+-- This plugin is using uptime to retrieve the load average and then parses the result
+-- to a definable form. It needs 2 paramters : a String that will be displayed 
+-- before the load average (e.g. 'Load average :') and another String, which
+-- will be used as the delimiter. E.g. " - ", which will result in 
+-- '0.93 - 0.97 - 1.01'. of course a simple space ' ' can also be used).
 --
 -----------------------------------------------------------------------------
 
@@ -25,7 +29,7 @@ data LoadAverage = LoadAverage String String Int deriving (Read,Show)
 -- the load values.
 showLoadAverage :: String -> String -> IO String
 showLoadAverage preFix delimiter = do (_,out,_) <- readProcessWithExitCode "uptime" [] ""
-                                      return $ preFix ++ parse delimiter out
+                                      return $ preFix ++ parse2 delimiter out
 
 -- | Parses uptime's output and delimits the values with the string specified in 
 -- showLoadAverage.

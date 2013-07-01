@@ -9,8 +9,14 @@
 -- Portability :  untested
 --
 -- A simple plugin to display the remaining days till a specific date.
+--
+-- This plugin needs 5 parameters : The date's Year Month Day and a string
+-- that can be shown after the difference of days. The recommendet value for
+-- the string is ' Days'. The last parameter is the update rate of the plugin
+-- in tenth of seconds.
+--
 -- It can be used as a countdown till e.g. New Years or vacations. If
--- you set New Years you automatically get also the day of the year.
+-- you set the date to New Years you automatically get the day of the year.
 --
 -----------------------------------------------------------------------------
 

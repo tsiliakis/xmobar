@@ -9,6 +9,12 @@
 -- Portability :  untested
 --
 -- A simple plugin to display the external IP or any other String from a webserver.
+--
+-- This plugin can be pointed to a website, retrieves its content with a Http GET and
+-- displays the string. It needs 3 parameters : a String, which is the prefix
+-- (e.g. 'IP : '), a String which is the url of the server and a int which is the 
+-- rate the plugin updates in tenths of seconds.
+--
 -- As a simple server that returns a IP, feel free to use my server at 
 -- http://srv.u0.org/ip.php , but I can't guarantee that it will be up forever.
 -- An alternative is http://wtfismyip.com/text.
