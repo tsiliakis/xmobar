@@ -1,3 +1,14 @@
+#### **TL;DR**
+ If you're just searching for the plugins I wrote, they are here :
+
+ - [AptUpdates](https://github.com/tsiliakis/xmobar-test/blob/master/src/Plugins/AptUpdates.hs "AptUpdates")
+ - [Countdown](https://github.com/tsiliakis/xmobar-test/blob/master/src/Plugins/Countdown.hs)
+ - [LoadAverage](https://github.com/tsiliakis/xmobar-test/blob/master/src/Plugins/LoadAverage.hs)
+ - [ShowIP](https://github.com/tsiliakis/xmobar-test/blob/master/src/Plugins/ShowIP.hs)
+
+
+
+----------
 
 <h1 class="sectionedit1" id="xmobar">xmobar</h1>
 <div class="level1">
