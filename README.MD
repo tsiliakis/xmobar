@@ -6,7 +6,7 @@
  - [LoadAverage](https://github.com/tsiliakis/xmobar-test/blob/master/src/Plugins/LoadAverage.hs)
  - [ShowIP](https://github.com/tsiliakis/xmobar-test/blob/master/src/Plugins/ShowIP.hs)
 
-
+I'm gratefull for any comments or hints !
 
 ----------
 
